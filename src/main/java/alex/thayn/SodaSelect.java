@@ -32,7 +32,7 @@ public class SodaSelect{
 		return brands;
 	}
 	
-	public List getAllBrands() {
+	public List getAllDrinks() {
 		List brands = new ArrayList();
 		brands.add("Pepsi");
 		brands.add("Mug Root Beer");

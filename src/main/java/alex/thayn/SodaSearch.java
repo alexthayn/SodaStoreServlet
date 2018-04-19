@@ -7,7 +7,7 @@ public class SodaSearch {
 	private SodaSelect sodas;
 	
 	public List searchForSoda(String query) {		
-		List allSodas = sodas.getAllBrands();
+		List allSodas = sodas.getAllDrinks();
 		List queryMatches = new ArrayList();
 		
 		for(int i=0; i<allSodas.size();i++) {
