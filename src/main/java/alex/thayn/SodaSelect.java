@@ -31,4 +31,20 @@ public class SodaSelect{
 		
 		return brands;
 	}
+	
+	public List getAllBrands() {
+		List brands = new ArrayList();
+		brands.add("Pepsi");
+		brands.add("Mug Root Beer");
+		brands.add("Mountain Dew");
+		brands.add("Coca-Cola");
+		brands.add("Sprite");
+		brands.add("Fanta");
+		brands.add("Fresca");
+		brands.add("7up");
+		brands.add("A&W Root Beer");
+		brands.add("Crush");
+		
+		return brands;
+	}
 }
