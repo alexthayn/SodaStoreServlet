@@ -14,7 +14,8 @@ List result= (List) request.getAttribute("searchresult");
 		while(it.hasNext()){
 			out.println(it.next()+"<br>");
 		}
-	}else{
+	}
+	else{
 		out.println("There were no matching results!");
 	}
 
