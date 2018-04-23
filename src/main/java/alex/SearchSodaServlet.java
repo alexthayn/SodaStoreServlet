@@ -34,7 +34,7 @@ public class SearchSodaServlet extends HttpServlet{
 	java.sql.Connection conn = null;
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	SodaSearch search = new SodaSearch();
 	String query = req.getParameter("mySearch");
 	List<String> sodaResult = new ArrayList<String>(); // = search.searchForSoda(query);
@@ -60,7 +60,7 @@ public class SearchSodaServlet extends HttpServlet{
 	} catch (ClassNotFoundException e) {
 		// Handle errors class exceptions
 	} catch (SQLException e) {
-		// Handle erros for JDBC
+		// Handle errors for JDBC
 	}
 	
 	req.setAttribute("results",sodaResult);
