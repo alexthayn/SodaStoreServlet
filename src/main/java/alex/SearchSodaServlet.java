@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -26,7 +27,7 @@ import alex.thayn.SodaSearch;
 
 public class SearchSodaServlet extends HttpServlet{
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql:jacksonmysqldb.ck9qmzz9yyn6.us-west-2.rds.amazonaws.com";
+	static final String DB_URL = "jdbc:mysql://jacksonmysqldb.ck9qmzz9yyn6.us-west-2.rds.amazonaws.com";
 	static final String USER = "alex";
 	static final String PASS = "1234";
 	
@@ -35,8 +36,8 @@ public class SearchSodaServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	SodaSearch search = new SodaSearch();
-	String query = req.getParameter("Query");
-	List sodaResult = null; // = search.searchForSoda(query);
+	String query = req.getParameter("mySearch");
+	List<String> sodaResult = new ArrayList<String>(); // = search.searchForSoda(query);
 
 	//Connect to my db
 	try {
