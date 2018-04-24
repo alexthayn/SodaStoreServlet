@@ -37,7 +37,7 @@ public class SearchSodaServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	SodaSearch search = new SodaSearch();
 	String query = req.getParameter("Search");
-	List<String> sodaResult = new ArrayList<String>(); // = search.searchForSoda(query);
+	List<String> sodaResult = new ArrayList<String>();
 
 	//Connect to my db
 	try {
@@ -46,7 +46,7 @@ public class SearchSodaServlet extends HttpServlet{
 		conn = DriverManager.getConnection(DB_URL, USER, PASS);
 		System.out.println("Connected to database successfully...");
 		
-		String sqlquery = "SELECT * FROM alexdb.Sodas";
+		String sqlquery = "SELECT Name FROM alexdb.Sodas Where Name = " + query;
 		PreparedStatement sqlstatement = conn.prepareStatement(sqlquery);
 		ResultSet result = sqlstatement.executeQuery();
 		
