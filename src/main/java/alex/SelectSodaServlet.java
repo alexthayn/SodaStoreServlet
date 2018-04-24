@@ -33,7 +33,7 @@ public class SelectSodaServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	String sodaType = req.getParameter("Type");
-	
+	System.out.println("Soda Company Requested: " + sodaType);
 	List<String> sodas = new ArrayList<String>();
 
 	//Connect to my db
