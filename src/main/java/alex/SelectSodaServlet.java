@@ -60,12 +60,8 @@ public class SelectSodaServlet extends HttpServlet{
 			// Handle errors for JDBC
 		}
 	
-	SodaSelect sodaSelect = new SodaSelect();
-	SodaType l = SodaType.valueOf(sodaType);
-	
-	List sodaBrands = sodaSelect.getAvailableBrands(l);
 
-	req.setAttribute("brands",sodaBrands);
+	req.setAttribute("brands",sodas);
 	RequestDispatcher view = req.getRequestDispatcher("result.jsp");
 	view.forward(req, resp);
 	}
