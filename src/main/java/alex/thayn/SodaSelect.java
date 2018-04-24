@@ -9,7 +9,7 @@ public class SodaSelect{
 		List brands = new ArrayList();
 
 	
-		if(type.equals(SodaType.PEPSICO)){
+		if(type.equals(SodaType.Pepsico)){
 			brands.add("Pepsi");
 			brands.add("Mug Root Beer");
 			brands.add("Mountain Dew");
