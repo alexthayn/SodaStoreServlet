@@ -46,7 +46,7 @@ public class SearchSodaServlet extends HttpServlet{
 		conn = DriverManager.getConnection(DB_URL, USER, PASS);
 		System.out.println("Connected to database successfully...");
 		
-		String sqlquery = "SELECT Name FROM alexdb.Sodas Where Name = " + query;
+		String sqlquery = "SELECT * FROM alexdb.Sodas Where LOWER(Sodas.Name) LIKE '%" + query + "%'";
 		PreparedStatement sqlstatement = conn.prepareStatement(sqlquery);
 		ResultSet result = sqlstatement.executeQuery();
 		
