@@ -7,10 +7,14 @@
 <h1>Available Sodas</h1>
 <%
 List result= (List) request.getAttribute("brands");
-Iterator it = result.iterator();
-out.println("<br>We have <br><br>");
-while(it.hasNext()){
-out.println(it.next()+"<br>");
+if(result.isEmpty()){
+	out.println("<br> No Results Were Found <br><br>");
+}else{
+	Iterator it = result.iterator();
+	out.println("<br>We have <br><br>");
+	while(it.hasNext()){
+	out.println(it.next()+"<br>");
+	}
 }
 %>
 </body>
