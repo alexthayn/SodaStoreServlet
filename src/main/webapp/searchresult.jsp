@@ -7,7 +7,7 @@
 <h1>Available Sodas</h1>
 <%
 List result= (List) request.getAttribute("results");
-	if(result != null)
+	if(!result.isEmpty())
 	{
 		Iterator it = result.iterator();
 		out.println("<br>We have <br><br>");
