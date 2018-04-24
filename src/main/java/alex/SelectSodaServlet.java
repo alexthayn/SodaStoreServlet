@@ -19,7 +19,7 @@ import java.util.List;
 
 public class SelectSodaServlet extends HttpServlet{
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	String sodaType = req.getParameter("Type");
 
 	SodaSelect sodaSelect = new SodaSelect();

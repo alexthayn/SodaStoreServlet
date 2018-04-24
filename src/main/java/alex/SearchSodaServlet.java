@@ -34,7 +34,7 @@ public class SearchSodaServlet extends HttpServlet{
 	java.sql.Connection conn = null;
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 	SodaSearch search = new SodaSearch();
 	String query = req.getParameter("mySearch");
 	List<String> sodaResult = new ArrayList<String>(); // = search.searchForSoda(query);
