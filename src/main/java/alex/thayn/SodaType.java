@@ -1,6 +1,6 @@
 package alex.thayn;
 
 public enum SodaType{
-	PEPSICO, COCACOLA, DRPEPPERSNAPPLE
+	Pepsico, COCACOLA, DRPEPPERSNAPPLE, ALEXSODA
 }
 
