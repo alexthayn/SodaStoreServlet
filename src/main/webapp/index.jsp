@@ -12,7 +12,8 @@
 				List result= (List) request.getAttribute("index");
 				Iterator it = result.iterator();
 				while(it.hasNext()){
-				out.println("<option>" +it.next()+"</option>");
+					out.println("<option>" +it.next()+"</option>");
+				}
 			%>
 		</select>
 		<br><br>
