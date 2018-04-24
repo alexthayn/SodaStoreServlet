@@ -6,7 +6,7 @@
 <center>
 <h1>Available Sodas</h1>
 <%
-List result= (List) request.getAttribute("searchresult");
+List result= (List) request.getAttribute("results");
 	if(result != null)
 	{
 		Iterator it = result.iterator();
