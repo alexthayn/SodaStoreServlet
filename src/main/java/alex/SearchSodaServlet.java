@@ -40,7 +40,7 @@ public class SearchSodaServlet extends HttpServlet{
 	List<String> sodaResult = new ArrayList<String>(); // = search.searchForSoda(query);
 
 	//Connect to my db
-	/*try {
+	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		System.out.println("Connecting to a soda database...");
 		conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -61,8 +61,7 @@ public class SearchSodaServlet extends HttpServlet{
 		// Handle errors class exceptions
 	} catch (SQLException e) {
 		// Handle errors for JDBC
-	}*/
-	sodaResult.add("Hello");
+	}
 	
 	req.setAttribute("results",sodaResult);
 	RequestDispatcher view = req.getRequestDispatcher("searchresult.jsp");
