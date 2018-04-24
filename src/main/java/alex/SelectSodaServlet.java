@@ -43,7 +43,7 @@ public class SelectSodaServlet extends HttpServlet{
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			System.out.println("Connected to database successfully...");
 			
-			String sqlquery = "SELECT * FROM alexdb.Sodas Inner Join alexdb.SodaCompanies on Sodas.SodaCompanyId = SodaCompanies.Id Where SodaCompanies.Id = " + sodaType;
+			String sqlquery = "SELECT * FROM alexdb.Sodas Inner Join alexdb.SodaCompanies on Sodas.SodaCompanyId = SodaCompanies.Id Where SodaCompanies.Name = " + sodaType;
 			PreparedStatement sqlstatement = conn.prepareStatement(sqlquery);
 			ResultSet result = sqlstatement.executeQuery();
 			
